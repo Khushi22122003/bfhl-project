@@ -1,0 +1,33 @@
+/* BFHL — IDE-inspired "Graphite" theme */
+:root {
+  --bg: #0f1115;
+  --surface: #161a21;
+  --surface-2: #1c2129;
+  --fg: #e7ecf3;
+  --muted-fg: #8b95a5;
+  --border: #242a34;
+  --accent: #ffb347;      /* warm amber */
+  --accent-fg: #0f1115;
+  --danger: #ff6b6b;
+  --gold: #ffd166;
+}
+
+html, body, #root { background: var(--bg); color: var(--fg); }
+body { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.App { min-height: 100vh; }
+
+/* softer selection */
+::selection { background: rgba(255, 179, 71, 0.25); color: var(--fg); }
+
+/* subtle scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #303742; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* Use a different sans for UI headings; keep mono for data */
+.font-sans { font-family: 'Inter', 'Space Grotesk', system-ui, sans-serif; }
+.font-mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+textarea::placeholder { color: var(--muted-fg); }
