@@ -1,28 +1,33 @@
-# SRM Full Stack Round 1 — BFHL Submission
-By: Khushi Kumari · RA2311003011224
+# BFHL Project (SRM Full Stack Challenge)
 
-## Structure
-- `backend/`  → Node.js + Express, exposes `POST /bfhl`. Deploy to Heroku/Render.
-- `frontend/` → React SPA. Deploy to Vercel/Netlify. Set `REACT_APP_BACKEND_URL`.
+This project implements a REST API and a simple frontend to process hierarchical relationships from input data.
 
-## Quick start (local)
-```bash
-# backend
-cd backend && npm install && npm start   # http://localhost:3001/bfhl
+## 🚀 Features
 
-# frontend (new terminal)
-cd frontend && yarn install
-echo 'REACT_APP_BACKEND_URL=http://localhost:3001' > .env
-yarn start                                # http://localhost:3000
-```
+* Accepts input in the format `A->B`
+* Builds hierarchical tree structures
+* Detects cycles in the graph
+* Filters invalid inputs
+* Identifies duplicate edges
+* Provides summary (trees, cycles, largest root)
 
-## Deploy
-See `backend/README.md` for Heroku / Render steps.
-Frontend: import the `frontend/` folder into Vercel, set env var `REACT_APP_BACKEND_URL` to your deployed backend URL.
+## ⚙️ Backend
 
-## Test curl
-```bash
-curl -X POST http://localhost:3001/bfhl \
-  -H "Content-Type: application/json" \
-  -d '{"data":["A->B","A->C","B->D","C->E","E->F","X->Y","Y->Z","Z->X","P->Q","Q->R","G->H","G->H","G->I","hello","1->2","A->"]}'
-```
+* Built using Node.js and Express
+* Endpoint: `POST /bfhl`
+
+## 🌐 Frontend
+
+* Simple UI to enter data and view results
+* Displays trees, cycles, invalid and duplicate entries
+
+## 🔗 Live Links
+
+* Frontend: https://task-master-1209.preview.emergentagent.com
+* Backend: https://task-master-1209.preview.emergentagent.com
+
+## 👩‍💻 Author
+
+Khushi Kumari
+RA2311003011224
+[kk5504@srmist.edu.in](mailto:kk5504@srmist.edu.in)
